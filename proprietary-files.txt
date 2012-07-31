@@ -49,7 +49,7 @@ lib/libril.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libuca-ril.so
-lib/libuca-ril-qmi.so
+lib/libucaril.so
 lib/libtime_genoff.so
 
 # GPS
@@ -85,7 +85,7 @@ etc/wl/bcm4330_apsta.bin
 etc/wl/bcm4330_mfg.bin
 etc/wl/bcm4330_p2p.bin
 etc/wl/nvram.txt
-etc/wl/nvram_murata_b2_65l.txt
+
 
 # Firmware
 etc/firmware/cyttsp_8660_ffa.hex
