@@ -43,19 +43,6 @@ TARGET_USE_SCORPION_PLD_SET := true
 TARGET_SCORPION_BIONIC_PLDOFFS := 6
 TARGET_SCORPION_BIONIC_PLDSIZE := 128
 
-# wifi
-# Connectivity - Wi-Fi
-BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-WPA_SUPPLICANT_VERSION      := VER_0_6_X
-# uses bcm4330
-BOARD_WLAN_DEVICE           := bcm4330
-WIFI_DRIVER_MODULE_PATH     := "/lib/modules/wlan.ko"
-WIFI_DRIVER_FW_STA_PATH     := "/system/etc/wl/bcm4330.bin"
-WIFI_DRIVER_FW_AP_PATH      := "/system/etc/wl/bcm4330_apsta.bin"
-WIFI_DRIVER_FW_PATH_P2P     := "/system/etc/wl/bcm4330_p2p.bin"
-WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/wl/bcm4330.bin nvram_path=/system/etc/wl/nvram.txt"
-WIFI_DRIVER_MODULE_NAME     := "wlan"
-
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_GRAPHICS := ../../../device/pantech/msm8660-common/recovery/graphics.c
 
