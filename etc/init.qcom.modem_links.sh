@@ -38,7 +38,7 @@ cd /firmware/image
 # Get the list of files in /firmware/image
 # for which sym links have to be created
 
-fwfiles=`ls modem* q6* playrdy*`
+fwfiles=`ls modem* q6* tzapps*`
 
 # Check if the links with similar names
 # have been created in /system/etc/firmware
@@ -70,17 +70,17 @@ for fwfile in $fwfiles; do
 
 done
 
-# if links are needed mount the FS as read write
 case $linksNeeded in
    1)
       cd /firmware/image
-      mount -t ext4 -o remount,rw,barrier=0 /dev/block/mmcblk0p13 /system
 
       #Adjust permissions for select files
       chmod 4755 /system/bin/diag_mdlog
       chmod 4755 /system/bin/btwlancoex
-#FEATURE_LGT_DS_CTS_SUID_IP
-      chmod  640 /system/bin/usbhub
+      chmod 0755 /system/bin/ip
+      #EF39S_ICS_CTS_PASS_PATCH
+      #chmod 4755 /system/bin/usbhub
+      chmod 640 /system/bin/usbhub
       chmod  755 /system/bin/usbhub_init
 
       case `ls modem.mdt 2>/dev/null` in
@@ -105,18 +105,16 @@ case $linksNeeded in
             log -p w -t PIL 8660 device but no q6 image found;;
       esac
 
-      case `ls playrdy.mdt 2>/dev/null` in
-         playrdy.mdt)
-            for imgfile in playrdy*; do
+      case `ls tzapps.mdt 2>/dev/null` in
+         tzapps.mdt)
+            for imgfile in tzapps*; do
                ln -s /firmware/image/$imgfile /system/etc/firmware/$imgfile 2>/dev/null
             done
             break;;
          *)
-            log -p w -t PIL 8660 device but no playready image found;;
+            log -p w -t PIL 8660 device but no tzapps image found;;
       esac
 
-      #remount file system as read only
-      mount -t ext4 -o remount,ro,barrier=0 /dev/block/mmcblk0p13 /system
       break;;
 
    *)

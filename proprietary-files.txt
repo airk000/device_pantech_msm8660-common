@@ -16,7 +16,6 @@ lib/libaudioparsers.so
 # mmparser extended
 lib/libmmosal.so
 lib/libmmparser.so
-lib/libmmparser_divxdrmlib.so
 
 # Graphics
 lib/egl/eglsubAndroid.so
@@ -49,7 +48,6 @@ lib/libril.so
 lib/libril-qc-qmi-1.so
 lib/libril-qcril-hook-oem.so
 lib/libuca-ril.so
-lib/libucaril.so
 lib/libtime_genoff.so
 
 # GPS
@@ -66,8 +64,8 @@ lib/libmllite.so
 lib/hw/lights.msm8660.so
 
 # Camera
-lib/libcamera.so
 #lib/libcamera_client.so
+lib/hw/camera.msm8660.so
 lib/libgemini.so
 lib/libmmipl.so
 lib/libmmjpeg.so
@@ -78,13 +76,6 @@ lib/liboemcamera.so
 # General
 lib/libdiag.so
 
-# Wi-Fi
-etc/wifi/wpa_supplicant.conf
-etc/wl/bcm4330.bin
-etc/wl/bcm4330_apsta.bin
-etc/wl/bcm4330_mfg.bin
-etc/wl/bcm4330_p2p.bin
-etc/wl/nvram.txt
 
 
 # Firmware
