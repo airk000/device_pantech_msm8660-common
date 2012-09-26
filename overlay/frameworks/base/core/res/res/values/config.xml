@@ -42,12 +42,8 @@
          specified -->
     <string name="default_wallpaper_component">com.android.phasebeam/.PhaseBeamWallpaper</string>
 
-    <!-- Vibrator pattern for feedback about touching a virtual key -->
-    <integer-array name="config_virtualKeyVibePattern">
-        <item>10</item>
-    </integer-array>
 
     <!-- Default interface to monitor data use -->
-    <string name="config_datause_iface">rmnet</string>
+    <string name="config_datause_iface">rmnet_sdio0</string>
 
 </resources>

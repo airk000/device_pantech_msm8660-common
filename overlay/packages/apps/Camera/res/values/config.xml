@@ -18,6 +18,5 @@
 -->
 
 <resources>
-    <bool name="needsEarlyVideoSize">true</bool>
-    <bool name="alwaysUsePreferredPreviewSize">true</bool>
+    <bool name="wantsFocusModes">true</bool>
 </resources>
